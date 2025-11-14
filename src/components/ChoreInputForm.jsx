@@ -132,7 +132,7 @@ function ChoreInputForm() {
     </div>
 
     {/* Pass submissions and totals as props */}
-    <ChoreGraph submissions={submissions} totals={totals} />
+    {/* <ChoreGraph submissions={submissions} totals={totals} /> */}
   </div>
 )}
     </div>
