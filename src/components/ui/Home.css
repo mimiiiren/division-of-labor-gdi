@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+.homepage {
+  font-family: "DM Serif Display", serif;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #EEEDBF;
+  position: relative;
+  overflow: hidden;
+}
+.header {
+    margin-top: 15rem;
+}
+h1 {
+    text-align: center;
+}
+.subtitle {
+    font-style: italic;
+    text-align: center;
+}
+/* Animated background spheres */
+.sun {
+  background-color: #734444;
+  opacity: 0.3;
+  position: absolute;
+  top: -1050px;
+  left: -300px;
+  width: 2200px;
+  height: 1200px;
+  border-radius: 50%;
+  animation: sunrise2 10s linear 1s infinite;
+  z-index: 0;
+}
+.sun2 {
+  background-color: #C37857;
+  opacity: 0.6;
+  position: absolute;
+  top: -1050px;
+  left: -1200px;
+  width: 2200px;
+  height: 1200px;
+  border-radius: 50%;
+  animation: sunrise2 14s linear 2s infinite;
+  z-index: 0;
+}
+.sun3 {
+  background-color: #99B27F;
+  opacity: 0.6;
+  position: absolute;
+  top: -1050px;
+  left: -600px;
+  width: 2200px;
+  height: 1200px;
+  border-radius: 50%;
+  animation: sunrise2 12s linear 0s infinite;
+  z-index: 0;
+}
+@keyframes sunrise2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(150px, 50px);
+  }
+  50% {
+    transform: translate(300px, 10px);
+  }
+  75% {
+    transform: translate(150px, 50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

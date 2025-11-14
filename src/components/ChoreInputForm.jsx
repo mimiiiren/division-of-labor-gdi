@@ -10,10 +10,10 @@ function ChoreInputForm() {
     timeSpent: 0
   });
 
-  // ⭐ NEW: Store all submitted entries
+  // Store all submitted entries
   const [submissions, setSubmissions] = useState([]);
   
-  // ⭐ NEW: Toggle to show/hide results
+  // Toggle to show/hide results
   const [showResults, setShowResults] = useState(false);
 
   function handleChange(e) {
@@ -30,7 +30,7 @@ function ChoreInputForm() {
     const minutes = Math.floor(formData.timeSpent / (1000 * 60) % 60);
     const seconds = Math.floor(formData.timeSpent / (1000) % 60);
     
-    // ⭐ NEW: Create submission object
+    // Create submission object
     const newSubmission = {
       name: formData.name,
       task: formData.task,
@@ -38,10 +38,10 @@ function ChoreInputForm() {
       timeSpentMs: formData.timeSpent
     };
     
-    // ⭐ NEW: Add to submissions array
+    // Add to submissions array
     setSubmissions([...submissions, newSubmission]);
     
-    // ⭐ NEW: Show results section
+    // Show results section
     setShowResults(true);
     
     console.log('Submitted:', newSubmission);
@@ -58,7 +58,7 @@ function ChoreInputForm() {
     }));
   }
 
-  // ⭐ NEW: Calculate total hours per partner
+  // Calculate total hours per partner
   const calculateHoursByPartner = () => {
     const partner1Total = submissions
       .filter(sub => sub.name === 'partner1')
@@ -108,14 +108,16 @@ function ChoreInputForm() {
             <option value="vacuum">Vacuum</option>
             <option value="dishes">Clean the Dishes</option>
           </select>
+          <div className="stopwatch">
                 <Stopwatch clockedInTime={handleElapsedTime}/>
         </div>
+          </div>
 
-        <button type="submit" className="resultsButton">See My Results!</button>
+        <button type="submit" className="resultsButton">See My Results</button>
       </form>
 
         
-      {/* ⭐ UPDATED: Results section - only show if there are submissions */}
+      {/* Results section - only show if there are submissions */}
 {showResults && submissions.length > 0 && (
   <div className="results" id="results">
     <h2>Your Household Labor Distribution</h2>
@@ -129,7 +131,7 @@ function ChoreInputForm() {
       ))}
     </div>
 
-    {/* ⭐ Pass submissions and totals as props */}
+    {/* Pass submissions and totals as props */}
     <ChoreGraph submissions={submissions} totals={totals} />
   </div>
 )}

@@ -1,5 +1,6 @@
 // 3 different hooks
 import React, { useState, useEffect, useRef } from 'react';
+import '@/components/ui/Stopwatch.css'
 
 function Stopwatch({clockedInTime}) {
     // current timer is false, not currently running
