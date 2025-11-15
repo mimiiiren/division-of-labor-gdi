@@ -52,8 +52,10 @@ function Stopwatch({clockedInTime}) {
             <div className="display">
                 {formatTime()}
             </div>
-            <button type="button" onClick={start} className="clock-in">Start Grinding</button>
-             <button type="button" onClick={stop} className="clock-out">Done!</button>
+            <div className="button-group">
+            <button type="button" onClick={start} className="clock-in">Start Task</button>
+                <button type="button" onClick={stop} className="clock-out">Done!</button>
+                </div>
 
     </div>
     );

@@ -10,8 +10,8 @@
 .header {
     margin-top: 15rem;
 }
-h1 {
-    text-align: center;
+.title {
+text-align: center;
 }
 .subtitle {
     font-style: italic;

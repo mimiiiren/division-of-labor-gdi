@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
 :root {
     --bgCol: #EEEDBE;
     --resultsCol: #99B27F;
@@ -8,28 +10,16 @@ body {
     align-items: center;
     background-color: var(--bgCol);
 }
-.results {
-    background: var(--resultsCol);
-    opacity: 0.8;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
 .container {
-    padding: 1rem;
     text-align: center;
 }
 .partner-section {
-    padding: 2rem;
+    padding: 1rem;
 }
 .stopwatch {
     padding: 1rem;
 }
 form {
-    display: block;
 	width: 500px;
 	margin: 2rem auto;
 	padding: 2.5rem;
@@ -58,11 +48,15 @@ textarea {
 	box-sizing: border-box;
 }
 .resultsButton {
+    font-family: "DM Serif Display", serif;
     background: linear-gradient(135deg, #C37857 0%, #734444 100%);
     color: #EEEDBE;
     margin-top: 0.5rem;
     position: relative;
     overflow: hidden;
+    padding: 1rem;
+    width: 300px;
+    font-size: 30px;
 }
 
 .resultsButton::before {
@@ -78,9 +72,55 @@ textarea {
 
 .resultsButton:hover::before {
     left: 100%;
+    border: none;
 }
 
 .resultsButton:hover {
     transform: translateY(-2px);
     background: linear-gradient(135deg, #734444 0%, #99B27F 100%);
+}
+.results {
+    background: rgb(154, 179, 128) url('https://img.freepik.com/premium-vector/house-cleaning-service-line-art-icon-set-vector-illustration-flat-signs-thin-line-style-concept-services-cleaning-laundry_98480-3686.jpg');
+    background-repeat: repeat;
+    background-blend-mode: luminosity;
+    background-position: 0 0;
+    animation: pan 20s linear infinite;
+    max-width: 596px;
+    min-height: 842px;
+    opacity: 0.8;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(107, 142, 35, 0.5);
+    text-shadow: 0 0 0.5rem rgba(107, 142, 35, 0.8);
+    margin: 2rem auto;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem #6B8E23;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem #6B8E23;
+}
+.partner1 {
+    color: #734444;
+}
+.partner2 {
+        color: #C37857;
+}
+.submission-item{
+    text-shadow: 0.1rem 0.1rem 0.1rem #C37857;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 596px 842px;
+    }
 }

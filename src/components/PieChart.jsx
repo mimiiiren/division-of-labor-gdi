@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import '@/components/ui/PieChart.css'
 import { TrendingUp } from 'lucide-react';
 
 export default function WorkHoursPieChart() {
@@ -62,13 +63,12 @@ export default function WorkHoursPieChart() {
   });
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 flex items-center justify-center">
+    <div className="container-chart">
       <div className="flex flex-col bg-white rounded-lg shadow-lg border border-gray-200 max-w-md w-full">
         <div className="items-center text-center pb-0 pt-6 px-6">
-          <h3 className="text-2xl font-semibold tracking-tight text-red-500">
-            Work Hours - Donut Chart
-          </h3>
-          <p className="text-sm text-gray-500 mt-2">Employee Work Distribution</p>
+          <p className="title-for-donut-chart">
+          Donut Chart for Work Hours
+          </p>
         </div>
         
         <div className="flex-1 pb-0 px-6 h-25 w-25">
@@ -87,30 +87,30 @@ export default function WorkHoursPieChart() {
               ))}
             </svg>
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                       
+          <div className="text-gray-500 leading-none">
+            Showing total work hours distribution:
+          </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900">{totalHours}</div>
-                <div className="text-sm text-gray-500">Total Hours</div>
+                <div className="text-3xl font-bold text-gray-900">{totalHours} Total Hours</div>
               </div>
             </div>
           </div>
           
           <div className="mt-4 flex justify-center gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-              <span className="text-sm text-gray-700">{user1Name}: {user1Hours}h</span>
+              <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#734444' }}></div>
+              <h2 className="partner-one">{user1Name}: {user1Hours}h</h2>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <span className="text-sm text-gray-700">{user2Name}: {user2Hours}h</span>
+            <div>
+              <div style={{ color: '#C37857' }}></div>
+              <h2 className="partner-two">{user2Name}: {user2Hours}h</h2>
             </div>
           </div>
         </div>
         
         <div className="flex flex-col gap-2 text-sm px-6 pb-6 pt-4">
-         
-          <div className="text-gray-500 leading-none">
-            Showing total work hours distribution
-          </div>
+
         </div>
       </div>
     </div>

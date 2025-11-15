@@ -5,6 +5,12 @@
     gap: 1.5rem;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .display {
     font-size: 4rem; 
     font-weight: bold;

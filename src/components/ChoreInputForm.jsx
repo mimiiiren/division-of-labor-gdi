@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '@/components/ui/ChoreInputForm.css'
 import Stopwatch from './Stopwatch.jsx';
+import PieChart from './PieChart.jsx'
 import ChoreGraph from './ChoreGraph.jsx';
 
 function ChoreInputForm() {
@@ -126,13 +127,14 @@ function ChoreInputForm() {
       <h3>All Entries:</h3>
       {submissions.map((sub, index) => (
         <div key={index} className="submission-item">
-          <strong>{sub.name === 'partner_one' ? 'Partner 1' : 'Partner 2'}</strong> - {sub.task} - {sub.timeSpent}
+          <strong>{sub.name === 'partner_one' ? <strong className="partner1">Partner 1</strong> : <strong className="partner2">Partner 2</strong>}</strong> - {sub.task} - {sub.timeSpent}
         </div>
-      ))}
-    </div>
 
-    {/* Pass submissions and totals as props */}
-    {/* <ChoreGraph submissions={submissions} totals={totals} /> */}
+      ))}
+                    <div className="chart">
+        <PieChart />
+            </div>
+    </div>
   </div>
 )}
     </div>

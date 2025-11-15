@@ -1,0 +1,18 @@
+.title-for-donut-chart {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.1rem #6B8E23;
+margin: 0rem;
+}
+.partner-one {
+    color: #734444;
+}
+.partner-two {
+    color: #C37857;
+}
+.container-chart {
+    background: rgba(238, 237, 190, 0.8);
+    padding: 1rem;
+border-radius: 1rem;
+margin: 1rem auto;
+}

@@ -88,6 +88,7 @@ strong {
 }
 
 h1 {
+  text-align: left;
   font-size: 80px;
   margin-bottom: 20px;
   font-style: italic;
@@ -174,8 +175,8 @@ h1 {
 }
 .button-wrapper {
   position: absolute;
-  bottom: 30px; /* Adjust vertical position */
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -1rem; /* Adjust vertical position */
+  left: 40rem;
+  transform: none;
   z-index: 2;
 }
